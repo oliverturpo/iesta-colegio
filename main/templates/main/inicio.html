@@ -1,0 +1,336 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "primary": "#1E40AF",
+        "success": "#10B981"
+      },
+      "fontFamily": {
+        "montserrat": [
+          "Montserrat",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+    <style>
+        body { font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <title>Institución Educativa Secundaria Túpac Amaru - Sistema de Control de Asistencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="bg-white font-montserrat">
+    
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-2 md:mb-0">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-3">
+                    <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-lg font-semibold text-gray-800">I.E.S. Túpac Amaru</h1>
+                    <p class="text-xs text-gray-600">Sistema de Control de Asistencia</p>
+                </div>
+            </div>
+            <button id="login-btn" class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-md text-sm transition duration-300 ease-in-out">
+                Iniciar Sesión
+                <i class="fa-solid fa-right-to-bracket ml-2"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-24 md:pt-32 pb-16 md:pb-24 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Control de Asistencia Inteligente con Tecnología RFID</h2>
+                    <p class="text-gray-600 mb-6">Sistema avanzado para el registro automático de asistencia, seguimiento y reportes en tiempo real para una gestión educativa eficiente.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-md font-medium transition duration-300 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-info-circle mr-2"></i>
+                            Más información
+                        </button>
+                        <button class="bg-white border-2 border-primary text-primary hover:bg-primary/10 py-3 px-6 rounded-md font-medium transition duration-300 ease-in-out flex items-center justify-center">
+                            <i class="fa-solid fa-play mr-2"></i>
+                            Ver demostración
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                        <img class="w-full h-auto" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6a81367ac9-cc5580c021b191d9d408.png" alt="peruvian high school students in uniform using RFID cards for attendance system, modern school setting, professional education photo">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4">
+                            <p class="text-white text-sm">Estudiantes utilizando el sistema RFID para registro de asistencia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Características Principales</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nuestro sistema ofrece soluciones innovadoras para el control de asistencia en entornos educativos</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div id="feature-card-1" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 mx-auto">
+                        <i class="fa-solid fa-id-card text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Control Automático</h3>
+                    <p class="text-gray-600 text-center">Registro RFID instantáneo que elimina errores humanos y agiliza el proceso de control de asistencia.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Registro con tarjetas RFID personalizadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Identificación inmediata del estudiante</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Registro de entradas y salidas automático</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 2 -->
+                <div id="feature-card-2" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 mx-auto">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Reportes en Tiempo Real</h3>
+                    <p class="text-gray-600 text-center">Estadísticas y gráficos detallados para análisis de asistencia y toma de decisiones educativas.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Estadísticas por aula, grado y sección</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Exportación de datos a Excel y PDF</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Visualización de tendencias de asistencia</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature Card 3 -->
+                <div id="feature-card-3" class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4 mx-auto">
+                        <i class="fa-solid fa-bell text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Notificaciones a Padres</h3>
+                    <p class="text-gray-600 text-center">Alertas automáticas a padres de familia sobre la asistencia y puntualidad de sus hijos.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Envío de SMS y correos electrónicos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Notificaciones de inasistencias</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-success mt-1 mr-2"></i>
+                            <span class="text-sm text-gray-600">Acceso al portal para padres de familia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">98%</div>
+                    <div class="text-sm text-white/80">Precisión en registros</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">85%</div>
+                    <div class="text-sm text-white/80">Reducción de trabajo administrativo</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">1200+</div>
+                    <div class="text-sm text-white/80">Estudiantes registrados</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white mb-2">24/7</div>
+                    <div class="text-sm text-white/80">Acceso a la información</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Lo que dicen nuestros usuarios</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Experiencias de docentes y directivos que utilizan nuestro sistema</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div id="testimonial-1" class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="Director" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Carlos Mamani</h4>
+                            <p class="text-sm text-gray-600">Director, I.E.S. Túpac Amaru</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"El sistema ha transformado nuestra forma de gestionar la asistencia. La reducción de trabajo administrativo nos permite enfocarnos en lo más importante: la educación de nuestros estudiantes."</p>
+                </div>
+                
+                <div id="testimonial-2" class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="Docente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">María Quispe</h4>
+                            <p class="text-sm text-gray-600">Docente de Matemáticas</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Las notificaciones automáticas a padres han mejorado significativamente la comunicación entre la escuela y las familias. Los reportes me ayudan a identificar patrones de asistencia y actuar a tiempo."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">¿Listo para transformar el control de asistencia?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Solicita una demostración gratuita y descubre cómo nuestro sistema puede beneficiar a tu institución educativa.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-md font-medium transition duration-300 ease-in-out flex items-center justify-center">
+                    <i class="fa-solid fa-calendar-check mr-2"></i>
+                    Solicitar demostración
+                </button>
+                <button class="bg-white border-2 border-primary text-primary hover:bg-primary/10 py-3 px-6 rounded-md font-medium transition duration-300 ease-in-out flex items-center justify-center">
+                    <i class="fa-solid fa-phone mr-2"></i>
+                    Contactar con ventas
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">I.E.S. Túpac Amaru</h3>
+                    <p class="text-gray-400 mb-4">Sistema innovador de control de asistencia para instituciones educativas comprometidas con la excelencia.</p>
+                    <div class="flex space-x-4">
+                        <span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+                        <span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">Av. Túpac Amaru 123, Puno, Perú</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-phone mt-1 mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">+51 987 654 321</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope mt-1 mr-3 text-gray-400"></i>
+                            <span class="text-gray-400">contacto@iestupacaramu.edu.pe</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">Inicio</span></li>
+                        <li><span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">Características</span></li>
+                        <li><span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">Precios</span></li>
+                        <li><span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">Soporte técnico</span></li>
+                        <li><span class="text-gray-400 hover:text-white transition duration-300 cursor-pointer">Portal de padres</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 I.E.S. Túpac Amaru - Sistema de Control de Asistencia. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for login button interaction
+        document.getElementById('login-btn').addEventListener('click', function() {
+            alert('Redirigiendo al portal de inicio de sesión...');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body></html>
