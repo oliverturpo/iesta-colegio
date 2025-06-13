@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("¡Hola Mundo! - Sistema IESTA Colegio funcionando correctamente 🎓")
+    return HttpResponse("Para Servirle Mi King 👑")
 
 def status(request):
     import django
